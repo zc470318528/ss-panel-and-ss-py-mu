@@ -46,7 +46,7 @@ install_node_for_centos(){
 	
 	wget -O /usr/bin/shadowsocks "https://raw.githubusercontent.com/qinghuas/ss-panel-and-ss-py-mu/master/node/ss";chmod 777 /usr/bin/shadowsocks
 	yum -y install lsof lrzsz python-devel libffi-devel openssl-devel
-	git clone -b manyuser https://github.com/glzjin/shadowsocks.git "/root/shadowsocks"
+	git clone -b manyuser https://github.com/NimaQu/shadowsocks.git "/root/shadowsocks"
 	cd /root/shadowsocks;cp apiconfig.py userapiconfig.py;cp config.json user-config.json
 	
 	sed -i "17c WEBAPI_URL = \'${Front_end_address}\'" /root/shadowsocks/userapiconfig.py
