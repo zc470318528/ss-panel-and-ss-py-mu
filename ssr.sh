@@ -20,7 +20,11 @@ Add_swap_partition(){
 }
 
 Install_BBR(){
-	bash /root/tools/bbr.sh
+	if [ ! -f /root/tcp.sh ];then
+		wget "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"
+		chmod 777 tcp.sh
+	fi
+	./tcp.sh
 }
 
 Check_BBR_installation_status(){
@@ -209,7 +213,7 @@ Install_Aria2(){
 
 Install_Server_Status(){
 	if [ ! -f /root/status.sh ];then
-		wget "https://softs.fun/Bash/status.sh"
+		wget "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/status.sh"
 		chmod 777 status.sh
 	fi
 	
