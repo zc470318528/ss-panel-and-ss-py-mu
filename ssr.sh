@@ -20,11 +20,7 @@ Add_swap_partition(){
 }
 
 Install_BBR(){
-	if [ ! -f /root/tcp.sh ];then
-		wget "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"
-		chmod 777 tcp.sh
-	fi
-	./tcp.sh
+	wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
 }
 
 Check_BBR_installation_status(){
