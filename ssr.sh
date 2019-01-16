@@ -180,7 +180,7 @@ Edit_ss_node_info(){
 
 Nginx_Administration_Script(){
 	if [ ! -f /usr/bin/nas ];then
-		wget "https://raw.githubusercontent.com/qinghuas/Nginx-administration-script/master/nas.sh"
+		wget "https://raw.githubusercontent.com/zc470318528/Nginx-administration-script/master/nas.sh"
 		cp /root/nas.sh /usr/bin/nas;chmod 777 /usr/bin/nas;nas
 	else
 		nas
@@ -230,7 +230,7 @@ Install_Server_Status(){
 
 Install_Socks5(){
 	if [ ! -f /root/ss5.sh ];then
-		wget "https://raw.githubusercontent.com/qinghuas/socks5-install/master/ss5.sh"
+		wget "https://raw.githubusercontent.com/zc470318528/socks5-install/master/ss5.sh"
 		chmod 777 ss5.sh
 	fi
 		bash ss5.sh
@@ -238,7 +238,7 @@ Install_Socks5(){
 
 INSTALL(){
 	if [ ! -f /usr/bin/ssr ];then
-		wget -O /root/ssr_file.zip "https://github.com/qinghuas/ss-panel-and-ss-py-mu/archive/master.zip"
+		wget -O /root/ssr_file.zip "https://github.com/zc470318528/ss-panel-and-ss-py-mu/archive/master.zip"
 		unzip /root/ssr_file.zip -d /root;mv /root/ss-panel-and-ss-py-mu-master/* /root
 		cp /root/ssr.sh /usr/bin/ssr;chmod 777 /usr/bin/ssr
 		rm -rf ssr_file.zip /root/ss-panel-and-ss-py-mu-master /root/picture /root/README.md /root/ssr.sh
@@ -248,7 +248,7 @@ INSTALL(){
 
 UPDATE_SHADOWSOCKS_COMMAND(){
 	if [ -f /usr/bin/shadowsocks ];then
-		wget -O /usr/bin/shadowsocks "https://raw.githubusercontent.com/qinghuas/ss-panel-and-ss-py-mu/master/node/ss"
+		wget -O /usr/bin/shadowsocks "https://raw.githubusercontent.com/zc470318528/ss-panel-and-ss-py-mu/master/node/ss"
 		chmod 777 /usr/bin/shadowsocks
 	fi
 }
