@@ -288,7 +288,7 @@ echo "####################################################################
 # [2] [Install] # [iptalbes中转]                              #
 # [3] [Change]  # [SS NODE INOF]                                   #
 # [4] [Install] # [SS NODE]                                        #
-# [5] [Install] # [BBR]                                            #
+# [5] [Install] # [BBR Plus]                                            #
 ####################################################################
 # [a]检查BBR状态 [b]安装/执行路由追踪 [c]Speedtest/UnixBench/bench #
 # [d]更换镜像源 [e]安装/检查 Fail2ban [f]安装/执行 安全狗          #   
