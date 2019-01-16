@@ -61,6 +61,10 @@ Install_Safe_Dog(){
 	bash /root/tools/safe_dog.sh
 }
 
+Install_iptables-pf(){
+	bash /root/tools/iptables-pf.sh
+}
+
 Install_Serverspeeder(){
 	read -p "请选择选项 [1]安装 [2]卸载 :" Install_Serverspeeder_Options
 	
@@ -281,7 +285,7 @@ echo "####################################################################
 # [ID]  [TYPE]  # [DESCRIBE]                                       #
 ####################################################################
 # [1] [Install] # [LNMP] AND [SS PANEL V3]                         #
-# [2] [Install] # [SS NODE] AND [BBR]                              #
+# [2] [Install] # [iptalbes中转]                              #
 # [3] [Change]  # [SS NODE INOF]                                   #
 # [4] [Install] # [SS NODE]                                        #
 # [5] [Install] # [BBR]                                            #
@@ -300,8 +304,7 @@ clear;case "${SSR_OPTIONS}" in
 	1)
 	Install_the_front;;
 	2)
-	Install_ss_node
-	Install_BBR;;
+	Install_iptables-pf;;
 	3)
 	Edit_ss_node_info;;
 	4)
