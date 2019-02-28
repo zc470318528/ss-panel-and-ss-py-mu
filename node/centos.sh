@@ -41,7 +41,7 @@ install_node_for_centos(){
 	pip install cymysql requests -i https://pypi.org/simple/
 	
 	cd /root;wget https://github.com/jedisct1/libsodium/releases/download/1.0.17/libsodium-1.0.17.tar.gz
-	tar xf libsodium-1.0.17.tar.gz;cd /root/libsodium-1.0.17;./configure && make -j2 && make install;cd /root
+	tar xf /root/libsodium-1.0.17.tar.gz;cd /root/libsodium-1.0.17;./configure && make -j2 && make install;cd /root
 	echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf;ldconfig
 	
 	wget -O /usr/bin/shadowsocks "https://raw.githubusercontent.com/qinghuas/ss-panel-and-ss-py-mu/master/node/ss";chmod 777 /usr/bin/shadowsocks
