@@ -211,7 +211,7 @@ Install_Aria2(){
 
 Install_Server_Status(){
 	if [ ! -f /root/status.sh ];then
-		wget "https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/status.sh"
+		wget "https://raw.githubusercontent.com/zc470318528/ss-panel-and-ss-py-mu/master/tools/status.sh"
 		chmod 777 status.sh
 	fi
 	
