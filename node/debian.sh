@@ -36,7 +36,6 @@ install_node_for_debian(){
 	cd shadowsocks;chmod +x *.sh;pip install -r requirements.txt -i https://pypi.org/simple/
 	cp apiconfig.py userapiconfig.py;cp config.json user-config.json
 	
-	sed -i "17c WEBAPI_URL = \'${Front_end_address}\'" /root/shadowsocks/userapiconfig.py
 	sed -i "2c NODE_ID = ${Node_ID}" /root/shadowsocks/userapiconfig.py
 	sed -i "18c WEBAPI_TOKEN = \'${Mukey}\'" /root/shadowsocks/userapiconfig.py
 }
