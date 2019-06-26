@@ -239,7 +239,7 @@ INSTALL(){
 		wget -O /root/ssr_file.zip "https://github.com/zc470318528/ss-panel-and-ss-py-mu/archive/master.zip"
 		unzip /root/ssr_file.zip -d /root;mv /root/ss-panel-and-ss-py-mu-master/* /root
 		cp /root/ssr.sh /usr/bin/ssr;chmod 777 /usr/bin/ssr
-		rm -rf ssr_file.zip /root/ss-panel-and-ss-py-mu-master /root/picture /root/README.md /root/ssr.sh
+		rm -rf ssr_file.zip /root/ss-panel-and-ss-py-mu-master /root/picture /root/README.md
 		clear;echo "INSTALL DONE,Hellow.";sleep 1
 	fi
 }
@@ -252,7 +252,7 @@ UPDATE_SHADOWSOCKS_COMMAND(){
 }
 
 UNINSTALL(){
-	rm -rf /usr/bin/ssr /root/tools /root/node /root/.ip.txt
+	rm -rf /usr/bin/ssr /root/tools /root/node /root/.ip.txt /root/ssr.sh
 	clear;echo "UNINSTALL DONE,Bye."
 }
 
