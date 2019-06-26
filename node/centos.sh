@@ -49,7 +49,6 @@ install_node_for_centos(){
 	git clone -b manyuser https://github.com/NimaQu/shadowsocks.git "/root/shadowsocks"
 	cd /root/shadowsocks;cp apiconfig.py userapiconfig.py;cp config.json user-config.json
 	
-	sed -i "17c WEBAPI_URL = \'${Front_end_address}\'" /root/shadowsocks/userapiconfig.py
 	sed -i "2c NODE_ID = ${Node_ID}" /root/shadowsocks/userapiconfig.py
 	sed -i "18c WEBAPI_TOKEN = \'${Mukey}\'" /root/shadowsocks/userapiconfig.py
 }
