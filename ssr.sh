@@ -159,17 +159,15 @@ Install_ss_node(){
 Edit_ss_node_info(){
 	echo "旧设置如下:"
 	sed -n '2p' /root/shadowsocks/userapiconfig.py
-	sed -n '17,18p' /root/shadowsocks/userapiconfig.py
+	sed -n '18p' /root/shadowsocks/userapiconfig.py
 	
-	echo;read -p "(1/3)请设置新的前端地址:" Front_end_address
-	read -p "(2/3)请设置新的节点ID:" Node_ID
-	read -p "(3/3)请设置新的Mukey:" Mukey
+	echo;read -p "(1/2)请设置新的节点ID:" Node_ID
+	read -p "(2/2)请设置新的Mukey:" Mukey
 	
 	if [[ ${Mukey} = '' ]];then
 		Mukey='mupass';echo "emm,我们已将Mukey设置为:mupass"
 	fi
 	
-	sed -i "17c WEBAPI_URL = \'${Front_end_address}\'" /root/shadowsocks/userapiconfig.py
 	sed -i "2c NODE_ID = ${Node_ID}" /root/shadowsocks/userapiconfig.py
 	sed -i "18c WEBAPI_TOKEN = \'${Mukey}\'" /root/shadowsocks/userapiconfig.py
 	
