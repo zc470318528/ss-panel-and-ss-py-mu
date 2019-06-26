@@ -7,6 +7,8 @@ Shut_down_iptables(){
 	iptables -I INPUT -p udp -m udp --dport 22:65535 -j ACCEPT
 	iptables-save > /etc/sysconfig/iptables
 	echo 'iptables-restore /etc/sysconfig/iptables' >> /etc/rc.local
+	echo '/root/shadowsocks/run.sh' >> /etc/rc.local
+	chmod 755 /etc/rc.local
 }
 
 Shut_down_firewall(){
@@ -17,13 +19,8 @@ Shut_down_firewall(){
 
 Setting_node_information(){
 	clear;echo "设定服务端信息:"
-	read -p "(1/3)前端地址:" Front_end_address
-		if [[ ${Front_end_address} = '' ]];then
-			Front_end_address=`curl -s "https://myip.ipip.net" | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}"`
-			echo "emm,我们已将前端地址设置为:http://${Front_end_address}"
-		fi
-	read -p "(2/3)节点ID:" Node_ID
-	read -p "(3/3)Mukey:" Mukey
+	read -p "(1/2)节点ID:" Node_ID
+	read -p "(2/2)Mukey:" Mukey
 	if [[ ${Mukey} = '' ]];then
 		Mukey='mupass';echo "未设置该项,默认Mukey值为:mupass"
 	fi
