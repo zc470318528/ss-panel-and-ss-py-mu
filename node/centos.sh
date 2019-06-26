@@ -8,7 +8,7 @@ Shut_down_iptables(){
 	iptables-save > /etc/sysconfig/iptables
 	echo 'iptables-restore /etc/sysconfig/iptables' >> /etc/rc.local
 	echo '/root/shadowsocks/run.sh' >> /etc/rc.local
-	chmod 755 /etc/rc.local
+	chmod 755 /etc/rc.d/rc.local
 }
 
 Shut_down_firewall(){
