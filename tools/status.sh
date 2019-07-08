@@ -253,8 +253,8 @@ Set_server(){
 		[[ -z "$server_s" ]] && server_s=""
 	else
 		echo -e "请输入 ServerStatus 服务端的 IP/域名[server]"
-		read -e -p "(默认: status.xiaoqiu.online):" server_s
-		[[ -z "$server_s" ]] && server_s="status.xiaoqiu.online"
+		read -e -p "(默认: status.murasamefans.com):" server_s
+		[[ -z "$server_s" ]] && server_s="status.murasamefans.com"
 	fi
 	
 	echo && echo "	================================================"
